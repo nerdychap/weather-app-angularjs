@@ -11,7 +11,7 @@ body{
 input{
     border: 2px solid #48484a ;
     border-radius: 5px;
-    padding: 1%;
+    padding: 2px;
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
@@ -19,7 +19,7 @@ button{
     background-color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 5px;
-    padding: 1%;
+    padding:2px;
     outline: none;
     margin-bottom: 1px;
     border-style: solid;
