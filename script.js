@@ -37,6 +37,7 @@ app.controller('myController', function ($scope, $http) {
     };
     //function used to display data at the location entered into the input text box
     $scope.getWeather = function (area) {
+        $scope.geolocation = '';
         $http.get('https://api.openweathermap.org/data/2.5/weather?q=' + area + '&units=metric&APPID=75500792ea7488c01a878f05c8adf1d9').then(function res(response) {
             display(response);
         }).catch(err => {

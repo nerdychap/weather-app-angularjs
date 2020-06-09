@@ -11,6 +11,7 @@ body{
 }
 
 div[ng-app=myApp]{
+    
     max-width: 400px;
     width: 90%;
     height: 500px;
@@ -18,7 +19,9 @@ div[ng-app=myApp]{
     box-shadow: 0 0 5px grey;
 
 }
-
+div[ng-app=myApp] > div{
+    transition: all 1s;
+}
 .heading{
     margin: 10px 2px;
 }
