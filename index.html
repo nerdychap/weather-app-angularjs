@@ -21,7 +21,7 @@
 
         <div><button id="local" ng-click="local()">Local Weather</button></div>
         <div>
-            <input type="text" ng-model="geolocation" id="" ng-keydown="enterHandler($event, geolocation)">
+            <input type="text" ng-model="geolocation" id="" ng-keydown="enterHandler($event, geolocation)" autofocus>
             <button ng-click="getWeather(geolocation)">Enter</button>
         </div>
         <div> <img src={{image}} alt=""></div>

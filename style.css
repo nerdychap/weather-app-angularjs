@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: white;
+    background-color: lightblue;
     color: black;
     font-size: 150%;
     text-align: center;
@@ -11,7 +11,7 @@ body{
 }
 
 div[ng-app=myApp]{
-    max-width: 600px;
+    max-width: 400px;
     width: 90%;
     height: 500px;
     margin: auto;
