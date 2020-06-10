@@ -1,21 +1,13 @@
-
-
 var app = angular.module('myApp', []);
 app.controller('myController', function ($scope, $http) {
-    //function definition to assign API data to variables
+    //function definition to assign API data to a variable
     display = (info) => {
-        info = info.data;
-        $scope.weather = info.weather[0];
-        $scope.location = info.name + ', ' + info.sys.country;
-        $scope.description = $scope.weather.description;
-        $scope.temp = (info.main.temp).toPrecision(2) + " °C";
-        $scope.image = 'https://openweathermap.org/img/wn/' + $scope.weather.icon + '@2x.png';
+        $scope.data = info.data;
     };
-
     //function that is executed at start up to display weather at current location
     myLocation();
 
-    //enter key event handler
+    //ENTER key event handler
     $scope.enterHandler = (e, ar) => {
         if (e.keyCode == 13) {
             $scope.getWeather(ar);
@@ -35,17 +27,13 @@ app.controller('myController', function ($scope, $http) {
     $scope.local = () => {
         myLocation();
     };
+
     //function used to display data at the location entered into the input text box
     $scope.getWeather = function (area) {
-        $scope.geolocation = '';
         $http.get('https://api.openweathermap.org/data/2.5/weather?q=' + area + '&units=metric&APPID=75500792ea7488c01a878f05c8adf1d9').then(function res(response) {
             display(response);
         }).catch(err => {
-            $scope.description = err.data.message;
-            $scope.weather = '';
-            $scope.location = '';
-            $scope.temp = '';
-            $scope.image = '';
+            $scope.data = err.data;
 
         });
     };

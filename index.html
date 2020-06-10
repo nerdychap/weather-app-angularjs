@@ -12,25 +12,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <div class="heading">Weather Forecast</div>
     <div ng-app="myApp" ng-controller="myController">
-
-        <div><button id="local" ng-click="local()">Local Weather</button></div>
+        <div>
+            <button id="local" ng-click="local()">Local Weather</button>
+        </div>
         <div>
             <input type="text" ng-model="geolocation" id="" ng-keydown="enterHandler($event, geolocation)" autofocus>
             <button ng-click="getWeather(geolocation)">Enter</button>
         </div>
-        <div> <img src={{image}} alt=""></div>
-        <div>{{temp}}</div>
-        <div>{{description}}</div>
-        <div>{{location}}</div>
+        <div>
+            <img src='https://openweathermap.org/img/wn/{{data.weather[0].icon}}@2x.png' alt="">
+        </div>
+        <div>{{(data.main.temp).toPrecision(2) + " °C"}}</div>
+        <div>{{data.weather[0].weather.description}}</div>
+        <div>{{data.name + ', ' + data.sys.country}}</div>
+        <div>{{data.message}}</div>
     </div>
     </div>
-
 </body>
 
 </html>
