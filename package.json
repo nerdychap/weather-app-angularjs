@@ -1,0 +1,26 @@
+{
+  "name": "angulaweat",
+  "version": "1.0.0",
+  "description": "Weather app built using Angular JS and express framework",
+  "main": "script.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerdychap/weather-app-angularjs.git"
+  },
+  "author": "Siyabonga Hlengwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerdychap/weather-app-angularjs/issues"
+  },
+  "homepage": "https://github.com/nerdychap/weather-app-angularjs#readme"
+}
